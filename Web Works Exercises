@@ -1,0 +1,122 @@
+Web Works Exercises
+
+What is HTTP?
+
+The rules for server communication when it comes to websites..
+
+
+What is a URL?
+
+It's the way by which browsers get websites and such from the web.
+
+What is DNS?
+
+It's like the phone book for the internet, it stores IP addresses. 
+
+What is a query string?
+
+A query string is the string of characters used for the GET function, it tells another website what some wants or where it wants to go.
+ 
+What are two HTTP verbs and how are they different?
+
+GET and PUT. GET gets information, queries for it, and PUT send it dome where. GET leaves things as they are and PUT changes them.
+
+What is an HTTP request?
+
+Something that a website is asking for. 
+
+
+What is an HTTP response?
+
+A response is the was the HTTP responds to the request.
+
+What is an HTTP header? Give a couple examples of request and response headers you have seen.
+
+A header is information that a GET or a PUT or some other kind of HTTP action causes. It could contain IP address, cookies, language preferences, and date of browser. 
+
+A response header has similar information that the request one had but from the website or sources side.
+
+What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+
+The browser looks up the IP address in the DNS. The browser sends that to the server as a request.  The server sends back a response, possibly containing HTML, the browser the requests the other items(css, images, javascript). The browser finishes making the webpage.
+
+
+Part 2:
+
+1.Using curl, make a GET request to the icanhazdadjoke.com API to find all jokes involving the word “pirate”
+
+
+curl -H "Accept: application/json" "https://icanhazdadjoke.com/search?term=pirate"
+{"current_page":1,"limit":20,"next_page":1,"previous_page":1,"results":[{"id":"SvzIBAQS0Dd","joke":"What did the pirate say on his 80th birthday? Aye Matey!"},{"id":"2gii3LeN7Ed","joke":"Why couldn't the kid see the pirate movie? Because it was rated arrr!"},{"id":"QuscibaMClb","joke":"What does a pirate pay for his corn? A buccaneer!"},{"id":"exXSCtkOKe","joke":"Why do pirates not know the alphabet? They always get stuck at \"C\"."},{"id":"SnOf2gqjiqc","joke":"Why are pirates called pirates? Because they arrr!"}],"search_term":"pirate","status":200,"total_jokes":5,"total_pages":1}
+
+
+2. Use curl to find IP address og icanhazdadjokes
+
+icanhazdadjoke.com.	300	IN	A	172.67.211.64
+icanhazdadjoke.com.	300	IN	A	104.21.37.176
+
+
+3. 
+
+~$ cd desktop/meme_project/
+~/desktop/meme_project (main)$ python3 -m http.server
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+127.0.0.1 - - [22/Jun/2022 10:48:55] "GET / HTTP/1.1" 200 -
+
+
+
+
+part 3.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="https://wikipedia.org/" method="post/get">
+
+        <label for="Name">Name</label>
+        <input type="text" name="test" value="test" id="">
+        <input type="text" name= "test" value="test" id="">
+        <input type="submit" value="Submit">
+
+
+
+    </form>
+
+
+
+
+
+
+
+    Part 4
+This is my CLI:
+
+
+    url.hash
+'#Examples'
+console.log(url.hash)
+VM394:1 #Examples
+undefined
+const url = new URL("https://boardgamearena.com/lobby");
+undefined
+console.log(url.hash)
+VM564:1 
+undefined
+console.log(url.href)
+VM614:1 https://boardgamearena.com/lobby
+undefined
+const url = new URL("https://en.wikipedia.org/wiki/2022_Colombian_presidential_election#Team_for_Colombia_Coalition");
+undefined
+console.log(url.hash)
+VM658:1 #Team_for_Colombia_Coalition
+undefined
+console.log(url.origin)
+VM719:1 https://en.wikipedia.org
+undefined
